@@ -11,6 +11,7 @@ namespace RoomBookingApp.Domain.BaseModels
         [StringLength(80)]
         [EmailAddress]
         public string? Email { get; set; } = string.Empty;
+
         [DataType(DataType.Date)]
         public DateTime Date { get; set; }
 
