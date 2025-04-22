@@ -21,6 +21,7 @@ EnsureDatabaseCreated(conn);
 static void EnsureDatabaseCreated(SqliteConnection conn)
 {
     var build = new DbContextOptionsBuilder<RoomBookingAppDbContext>();
+
     build.UseSqlite(conn);
 
     using var context = new RoomBookingAppDbContext(build.Options);
