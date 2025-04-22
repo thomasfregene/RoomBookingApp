@@ -7,7 +7,7 @@ using RoomBookingApp.Domain.BaseModels;
 
 namespace RoomBookingApp.Core.Processors
 {
-    public class RoomBookingRequestProcessor
+    public class RoomBookingRequestProcessor : IRoomBookingRequestProcessor
     {
         private readonly IRoomBookingService _roomBookingService;
 
@@ -40,7 +40,7 @@ namespace RoomBookingApp.Core.Processors
             {
                 result.Flag = BookingResultFlag.Failure;
             }
-            
+
             return result;
         }
 
